@@ -1,0 +1,33 @@
+name: Pierwszy pipeline
+
+# Kiedy workflow ma być uruchamiany
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+# Definicja etapów (jobs)
+jobs:
+  stage1:
+    name: Etap 1 - Przygotowanie
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wyświetl komunikat
+        run: echo "Pierwszy pipeline w GitHub - Etap 1"
+
+  stage2:
+    name: Etap 2 - Weryfikacja
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wyświetl komunikat
+        run: echo "Pierwszy pipeline w GitHub - Etap 2"
+
+  stage3:
+    name: Etap 3 - Zakończenie
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wyświetl komunikat
+        run: echo "Pierwszy pipeline w GitHub - Etap 3"

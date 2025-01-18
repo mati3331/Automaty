@@ -1,0 +1,17 @@
+name: Pierwszy pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  stage1:
+    name: Etap 1 - Przygotowanie
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wyświetl komunikat
+        run: echo "Pierwszy pipeline w GitHub - Etap 1"

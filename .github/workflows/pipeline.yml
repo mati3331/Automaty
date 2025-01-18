@@ -16,7 +16,7 @@ jobs:
     # Użycie usługi Docker z Selenium (chociaż w tym przypadku, możesz używać systemu, który ma zainstalowaną przeglądarkę)
     services:
       selenium:
-        image: selenium/standalone-chrome
+        image: selenium/standalone-chrome:4.0.0
         ports:
           - 4444:4444  # Port na którym działa Selenium Server (Domyślnie 4444)
         options: >-
